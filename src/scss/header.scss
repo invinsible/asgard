@@ -9,7 +9,7 @@
       display: flex;
       align-items: center;
   
-      .top-header__contacts-item {
+      .top-header__contacts-item { 
       margin: 0 32px 0 0;
       font-size: 15px;
       color: #333333;
@@ -58,8 +58,8 @@
   }  
 }
 
-.main-menu {
-  box-shadow: 0px 2px 10px rgba(47, 180, 188, 0.12);
+.main-menu { 
+  border-bottom: 1px solid #E0E0E0;
 }
 
 .main-menu__list {

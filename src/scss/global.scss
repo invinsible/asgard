@@ -11,7 +11,7 @@ main {
 }
 
 .inner-main {
-  margin-top: 40px;
+  padding-top: 40px; 
 }
 
 .container {
@@ -34,6 +34,33 @@ h1 {
     width: 20%;
     height: 2px;
     background: linear-gradient(to right, #2FBEAD, transparent 85%);    
+  }
+}
+
+h3 {
+  margin: 0 0 16px 0;
+  font-size: 20px;
+  line-height: 27px;
+  background: linear-gradient(84deg, #2FBEAD -30%, #2D9CDB 155%);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.two-column-page {
+  display: flex;
+  align-items: flex-start;
+
+  .left-column {
+    flex-basis: 27.5%;
+    margin-right: 3%;
+  }
+
+  .right-column {
+    flex-basis: 72%;
+
+    h1 {
+      margin-bottom: 24px;
+    }
   }
 }
 

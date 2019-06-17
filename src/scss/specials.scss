@@ -1,8 +1,34 @@
 .special__item {
     display: flex;
     align-items: flex-start;
+    margin-bottom: 16px;
+
+    ul {
+      padding-left: 20px;
+      list-style: none;
+
+      & li::before {
+        content: "\2022";
+        color: #2FBEAD;
+        font-weight: bold;
+        display: inline-block; 
+        width: 1em;
+        margin-left: -1em;
+      }
+    }
     
     .special__item-img {
+        flex-basis: 50%;
         margin-right: 24px;
+        border-radius: 20px;
+        overflow: hidden;
+
+      img {
+        width: 100%; 
+      }
+    }
+
+    .special__item-txt {
+      flex-basis: 50%;
     }
 }
