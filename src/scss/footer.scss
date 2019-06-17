@@ -1,0 +1,127 @@
+.site-footer {
+  padding-top: 32px;
+  font-size: 15px;
+  font-weight: 500;
+  color: rgba(255,255,255,0.5);
+  background-color: #444F5D;  
+}
+
+.footer-columns {
+  display: flex;
+  justify-content: space-between;  
+}
+
+.footer-column {
+  flex-basis: 24.9%;
+
+  .footer-title {
+    margin: 0 0 30px 0;   
+    font-size: 24px;
+    font-weight: 700;
+    color: #fff;
+
+    &::after {
+      content: '';
+      display: block;
+      width: 90px;
+      height: 2px;  
+      margin-top: 20px;    
+      background: url('/build/img/footer-title-line.png');
+      background-color: #2FBEAD;
+    }
+    
+  }
+}
+
+.footer-nav-list {
+  padding-left: 0;
+  margin: 0;
+  list-style: none;
+  width: 60%;
+
+  li {
+    margin-bottom: 10px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+
+    &:last-child {
+      border-color: transparent;
+    }
+
+  a {
+    font-size: 15px;
+    font-weight: 500;
+    color: rgba(255,255,255,0.5);
+    text-decoration: none;
+    
+    &:hover {
+      color: #fff;
+    }
+  }
+  }
+
+  .footer-nav-list__item {
+    display: block;
+    margin-bottom: 8px;    
+  }
+}
+
+.footer-column_contacts {
+  p {
+    margin: 0 0 10px 0;
+
+    &::after {
+      content: '';
+      display: block;
+      margin-top: 8px;
+      width: 190px;
+      height: 1px;
+      background-color: rgba(255, 255, 255, 0.2);
+    }
+    a {
+      font-size: 15px;
+      font-weight: 500;
+      color: rgba(255,255,255,0.5);
+      text-decoration: none;
+      
+      &:hover {
+        color: #fff;
+      }
+    }
+  }
+
+  .white-btn,
+  .default-btn {
+    margin-top: 16px;
+    font-size: 15px;
+  }
+}
+
+.footer-phones {
+  display: inline-block;
+  vertical-align: top;
+  margin-right: 8px;
+
+  a {
+    display: block;
+  }
+}
+
+.footer-socials,
+.footer-pay {
+  display: flex;
+  align-items: center;
+
+  div {
+    margin-left: 20px;
+  }
+}
+
+.pay-img {
+  width: 191px;
+  height: 26px;
+  background: url('/build/img/pay-sprite.png');
+
+  &:hover {
+    background-position-y: -29px;
+  }
+}

@@ -1,0 +1,53 @@
+.doctors-list {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.doctor-preview {
+    flex-basis: 45%;
+    margin-right: 16px;
+    margin-bottom: 16px;
+
+    &:nth-child(2n) {
+        margin-right: 0;
+    }
+
+    .default-btn {
+        margin-right: 4%;
+    }  
+
+    .doctor-preview__info {
+        display: flex;
+        align-items: center;
+    
+        p {
+            margin: 8px 0;
+            line-height: 22px;
+        }
+
+        .doctor-preview__img {
+            margin-right: 24px;
+            flex-basis: 36%;
+    
+            img {
+                max-width: 100%;;
+            }
+        }
+
+        .doctor-preview__descr {
+            flex-basis: 64%;
+        }
+    
+        .doctor-preview__name {
+            display: block;
+            margin: 8px 0;
+            font-size: 20px;
+            font-weight: 500;
+            background: linear-gradient(84deg, #2FBEAD -30%, #2D9CDB 155%);
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+    }
+}
+
+

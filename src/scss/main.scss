@@ -1,0 +1,130 @@
+.slider-list {
+  position: relative;
+  height: 602px;
+}
+
+.slider {
+  margin-bottom: 36px;
+
+  .slider-list__item {
+    height: 100%;
+    background-image: url("/build/img/slide1.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+  
+    .slider-body {
+      max-width: 1280px;
+      height: 100%;
+      padding: 0 20px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;      
+      text-align: right;
+      font-size: 20px;
+    
+      .slider-body__txt {
+        width: 50%;
+
+        p {
+          color: #fff;
+          font-size: 30px;
+          line-height: 43px;
+        }
+    
+        .white-btn {
+          padding: 14px 38px;
+          border-width: 4px;
+        }
+      }
+    }
+  }
+}
+
+.main-container {
+  padding: 0 20px;
+  box-sizing: border-box;
+  margin: 0 auto;
+  max-width: 1600px;
+}
+
+.main-service {
+  margin-bottom: 24px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+
+  .main-service__item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    text-decoration: none;
+    flex-basis: 12%;    
+
+    &:hover img{
+      transform: scale(1.2);
+    }
+
+    .main-service__title {
+      margin: 0;
+      font-size: 20px;
+      color: #333333;
+      line-height: 30px;
+    }
+
+    img {
+      max-width: 75px;
+      max-height: 70px;
+      margin-bottom: 23px;
+      transition: transform 0.2s;
+    }
+  }
+}
+
+.main-content {
+  display: flex;
+
+  h1 {
+    margin: 0;
+
+    &::after {
+      margin-top: 13px;
+      width: 100%;
+    }
+  }
+   
+
+  .main-content__img {
+    flex-basis: 44%;
+    max-width: 640px;
+    height: 490px;
+    overflow: hidden;
+    margin-right: 25px;
+    background: url('/build/img/main-img-doctors.jpg');
+    background-position: center;
+  }
+
+  .main-content__txt {
+    flex-basis: 56%;
+
+    .blocquote-style {
+      margin: 30px 0 0 0;
+
+      .blocquote-txt {
+        font-size: 25px;
+        line-height: 38px;
+      }    
+
+      .blocquote-name {
+        margin: 28px 0 10px 0;
+        font-size: 22px;
+      }
+
+      .blocquote-status {
+        margin: 0;
+        font-size: 16px;
+      }
+    }
+  }
+}

@@ -1,0 +1,43 @@
+{
+  "name": "med-armor",
+  "version": "1.0.0",
+  "description": "Браузерный интерфейс экипировки мультяшного рыцаря.\r Отдельно интерфейс персонажа со слотами, к которым подходит определенный тип вещей и отдельно инвентарь, откуда вещи можно перетаскивать на персонажа.",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "gulp start"
+  },
+  "browserslist": [
+    "last 2 versions",
+    "IE 11",
+    "Firefox ESR"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/invinsible/med-armor.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/invinsible/med-armor/issues"
+  },
+  "homepage": "https://github.com/invinsible/med-armor#readme",
+  "dependencies": {
+    "del": "^4.1.1",
+    "gulp": "^4.0.2"
+  },
+  "devDependencies": {
+    "autoprefixer": "^9.5.1",
+    "browser-sync": "^2.26.5",
+    "gulp-concat": "^2.6.1",
+    "gulp-csso": "^3.0.1",
+    "gulp-imagemin": "^5.0.3",
+    "gulp-plumber": "^1.2.1",
+    "gulp-postcss": "^8.0.0",
+    "gulp-rename": "^1.4.0",
+    "gulp-sass": "^4.0.2",
+    "gulp-sourcemaps": "^2.6.5",
+    "gulp-uglify": "^3.0.2",
+    "gulp-webp": "^4.0.1"
+  }
+}
