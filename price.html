@@ -16,7 +16,7 @@
         <div class="top-header__contacts">
           <p class="top-header__contacts-item"><img src="./build/img/adress-ico.svg" alt="">Санкт-Петербург, Ул. Оптиков, 51/1</p>
           <a class="top-header__contacts-item" href="mailto:asgardmed@inbox.ru"><img src="./build/img/mail-ico.svg" alt="">asgardmed@inbox.ru</a>
-          <p class="top-header__contacts-item"><img src="/build/img/calendar-ico.svg" alt="">Ежедневно с 10:00 до 21:00</p>
+          <p class="top-header__contacts-item"><img src="./build/img/calendar-ico.svg" alt="">Ежедневно с 10:00 до 21:00</p>
         </div>
         <div class="social-links">
           <a class="social-links__item social-links__item_vk" href="#" target="_blank"></a>
@@ -130,12 +130,17 @@
           <div class="pre-footer round-rect">
             <form class="footer-form" action="#">
               <p class="footer-form__title">Записаться на приём</p>
-              <input type="text" placeholder="Ваше имя">
-              <input type="text" placeholder="Телефон или email">
-              <textarea name="" id="" cols="30" rows="10">Комментарий</textarea>
+              <div class="form-flex">
+                <input class="footer-form__input input-width" type="text" placeholder="Ваше имя">
+                <input class="footer-form__input input-width" type="text" placeholder="Телефон или email">
+              </div>
+              <textarea name="" id="" rows="6" placeholder="Комментарий"></textarea>
               <p class="politic-txt">Нажимая на кнопку “Отправить” вы принимаете условия <a href="#">политики конфиденциальности</a></p>
+              <button class="default-btn" type="submit">Отправить</button>
             </form>
-            <div class="form-map"></div>
+            <div class="form-map">
+              <img src="./build/img/map-footer.jpg" alt="">
+            </div>
           </div>
       </div>
   </main>
