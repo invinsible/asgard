@@ -39,19 +39,24 @@ h1 {
     content: '';
     display: block;
     margin-top: 10px;
-    width: 20%;
+    width: 30%;
     height: 2px;
     background: linear-gradient(to right, #2FBEAD, transparent 85%);    
   }
 }
 
 h3 {
+  font-family: 'FavoritC';
   margin: 0 0 16px 0;
   font-size: 20px;
   line-height: 27px;
   background: linear-gradient(84deg, #2FBEAD -30%, #2D9CDB 155%);
   background-clip: text;
   -webkit-text-fill-color: transparent;
+}
+
+.mb16 {
+  margin-bottom: 16px;
 }
 
 //Страницы с двумя колонками
@@ -88,7 +93,6 @@ h3 {
 .blocquote-style {
  font-weight: 300;
  font-style: italic;
- color: #4F4F4F; 
 
  .blocquote-txt {
    position: relative;
@@ -96,29 +100,30 @@ h3 {
    span {
      position: relative;
      z-index: 2;
-   }
-   &::before {
-     content: '';
-     position: absolute;
-     width: 83px;
-     height: 57px;
-     background: url('/build/img/blockquote.png');
-     top: -15px;     
-     left: -15px;
-     opacity: 0.5;
-     z-index: 1;
-   }
-   &::after {
-    content: '';
-    position: absolute;
-    width: 83px;
-    height: 57px;
-    background: url('/build/img/blockquote.png');
-    bottom: -15px;     
-    right: -15px;
-    opacity: 0.5;
-    z-index: 1;
-    transform: rotate(180deg);
+   
+    &::before {
+      content: '';
+      position: absolute;
+      width: 83px;
+      height: 57px;
+      background: url('/build/img/blockquote.png');
+      top: -15px;     
+      left: -15px;
+      opacity: 0.5;
+      z-index: 1;
+    }
+    &::after {
+      content: '';
+      position: absolute;
+      width: 83px;
+      height: 57px;
+      background: url('/build/img/blockquote.png');
+      bottom: -15px;     
+      right: -15px;
+      opacity: 0.5;
+      z-index: 1;
+      transform: rotate(180deg);
+    }
   }
  }
 
@@ -323,9 +328,76 @@ h3 {
 
   .form-map {
     flex-basis: 50%;
-    border-radius: 40px;
-    overflow: hidden;
+    
+    img {
+      width: 100%;
+      border-radius: 40px;
+    }
   }  
 }
 
 
+// Сертификаты
+.sertificate-list {
+  padding-left: 0;
+  margin: 0;
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  
+  .sertificate-list__item {
+    position: relative;
+    display: block;
+    margin-right: 11px;
+    text-decoration: none;
+
+    &::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 98%;
+      background-color: rgba(0,0,0,0.3);
+      background-image: url('/build/img/plus.svg');
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+
+    &:hover::after {
+      background-color: rgba(0,0,0,0.1);
+    }
+  }
+}
+
+// Наши работы 
+
+.work-list {
+  padding-left: 0;
+  margin: 0;
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+
+  .work-list__item {
+    display: block;
+    margin-right: 10px;
+    overflow: hidden;  
+
+    &:first-child {
+      border-radius: 20px 0px 0px 20px; 
+    }
+
+    &:last-child {
+      border-radius: 0px 20px 20px 0px;
+    }
+    
+    a {
+      display: block;
+    }
+
+    img {
+      width: 100%;
+    }
+  }
+}

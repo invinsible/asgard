@@ -110,10 +110,15 @@
 
     .blocquote-style {
       margin: 30px 0 0 0;
+      color: #4F4F4F; 
 
       .blocquote-txt {
         font-size: 25px;
         line-height: 38px;
+
+        span {
+          position: initial;
+        }
       }    
 
       .blocquote-name {
