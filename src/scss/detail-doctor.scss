@@ -1,0 +1,54 @@
+.tooth-ul {
+    ul {
+        margin: 0;
+        padding-left: 20px;
+        list-style-image: url('/build/img/tooth-ico.svg');
+
+        li {            
+            margin-bottom: 16px;
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+    }
+}
+
+.doctor-txt {
+    line-height: 23px;
+    margin-bottom: 16px;
+    
+    p {
+        margin: 7px 0;
+    }
+}
+
+.detail-doctor__img {
+    img {
+        width: 100%;
+    }
+}
+
+.doctor-study {
+
+    .doctor-prof {
+        margin: 0 0 8px 0;
+        font-size: 22px;
+        font-weight: 500;
+        color: #828282;
+    }
+
+    .doctor-since {
+        margin: 0 0 24px 0;
+        font-size: 18px;
+        font-weight: 500;
+        color: #BDBDBD;
+    }
+}
+
+.doctor-specialisation {
+    ul {
+        margin-bottom: 20px;
+    }    
+}
+

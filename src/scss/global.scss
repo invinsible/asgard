@@ -56,12 +56,14 @@ h3 {
 
 //Страницы с двумя колонками
 .two-column-page {
+  margin-bottom: 16px;
   display: flex;
   align-items: flex-start;
 
   .left-column {
     flex-basis: 27.5%;
     margin-right: 3%;
+    font-size: 15px;
   }
 
   .right-column {
@@ -325,3 +327,5 @@ h3 {
     overflow: hidden;
   }  
 }
+
+
