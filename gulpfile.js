@@ -31,7 +31,8 @@ const pathFrom = {
 const pathTo = {
     cssFiles : './build/css',
     jsFiles  : './build/js',
-    imgFiles : './build/img'
+    imgFiles : './build/img',
+    fontFiles: './build/fonts'
 }
 
 // Обработка CSS
@@ -68,6 +69,11 @@ gulp.task('images', function(){
     .pipe(server.stream());
 });
 
+gulp.task('fonts', function () { 
+    return gulp.src('./src/fonts/*.{woff,woff2,otf}')   
+    .pipe(gulp.dest(pathTo.fontFiles));
+});
+
 gulp.task('server', function(){
     server.init({
         server: '.'
@@ -89,7 +95,7 @@ gulp.task('refresh', function(done){
 
 
 
-gulp.task('build', gulp.series('clean', 'css', 'js', 'images'));
+gulp.task('build', gulp.series('clean', 'fonts', 'css', 'js', 'images'));
 
 gulp.task('start', gulp.series('build', 'server'));
 
