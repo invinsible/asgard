@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,500,700&display=swap&subset=cyrillic,cyrillic-ext" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500&display=swap&subset=cyrillic,cyrillic-ext" rel="stylesheet">
-  <link rel="stylesheet" href="./build/css/style.css">
+  <link rel="stylesheet" href="/css/style.css">
   <title>Asgard Стоматология</title>
 </head>
 <body>
@@ -14,9 +14,9 @@
     <div class="top-header">
       <div class="container">
         <div class="top-header__contacts">
-          <p class="top-header__contacts-item"><img src="./build/img/adress-ico.svg" alt="">Санкт-Петербург, Ул. Оптиков, 51/1</p>
-          <a class="top-header__contacts-item" href="mailto:asgardmed@inbox.ru"><img src="./build/img/mail-ico.svg" alt="">asgardmed@inbox.ru</a>
-          <p class="top-header__contacts-item"><img src="./build/img/calendar-ico.svg" alt="">Ежедневно с 10:00 до 21:00</p>
+          <p class="top-header__contacts-item"><img src="/img/adress-ico.svg" alt="">Санкт-Петербург, Ул. Оптиков, 51/1</p>
+          <a class="top-header__contacts-item" href="mailto:asgardmed@inbox.ru"><img src="/img/mail-ico.svg" alt="">asgardmed@inbox.ru</a>
+          <p class="top-header__contacts-item"><img src="/img/calendar-ico.svg" alt="">Ежедневно с 10:00 до 21:00</p>
         </div>
         <div class="social-links">
           <a class="social-links__item social-links__item_vk" href="#" target="_blank"></a>
@@ -28,7 +28,7 @@
     </div>
     <div class="bottom-header">
       <div class="container">
-        <a href="/" class="logo-header"><img src="./build/img/logo.png" alt=""></a>
+        <a href="/" class="logo-header"><img src="/img/logo.png" alt=""></a>
         <div class="bottom-headers__right">
           <div class="bottom-headers__phones">
             <a class="header-phone" href="tel:+78126170505">+7 (812) 617-05-05</a>
@@ -67,13 +67,13 @@
         
           <div class="two-column-page">
             <aside class="left-column">
-              <nav class="price-menu round-rect">
-                <a class="active" href="#">Имплантация</a>
-                <a href="#">Терапия</a>
-                <a href="#">Ортодонтия</a>
-                <a href="#">Хирургия</a>
-                <a href="#">Протезирование</a>
-                <a href="#">Профессиональная гигиена</a>
+              <nav class="price-menu round-rect" id="price-menu">
+                <a class="price-link active" href="#block1">Имплантация</a>
+                <a class="price-link" href="#block2">Терапия</a>
+                <a class="price-link" href="#block3">Ортодонтия</a>
+                <a class="price-link" href="#block4">Хирургия</a>
+                <a class="price-link" href="#block5">Протезирование</a>
+                <a class="price-link" href="#block6">Профессиональная гигиена</a>
                 <a href="#">Отбеливание</a>
                 <a href="#">Детская стоматология</a>
                 <a href="#">Остеопатическое лечение</a>
@@ -85,7 +85,7 @@
             <div class="right-column">
               <h1>Цены</h1>
 
-              <div class="price-block">
+              <div class="price-block" id="block1">
                 <p class="price-title">Имплантация</p>
                 <div class="price-row">
                   <p class="price-row__left">Консультация врача челюстного хирурга, имплантолога</p>
@@ -105,7 +105,7 @@
                 </div>                
               </div>
 
-              <div class="price-block">
+              <div class="price-block" id="block2">
                 <p class="price-title">Терапия</p>
                 <div class="price-row">
                   <p class="price-row__left">Первичная консультация врача-терапевта и составление плана лечения (взрослые)</p>
@@ -124,6 +124,88 @@
                   <p class="price-row__right">22 000</p>
                 </div>                
               </div>
+
+              <div class="price-block" id="block3">
+                <p class="price-title">Терапия</p>
+                <div class="price-row">
+                  <p class="price-row__left">Первичная консультация врача-терапевта и составление плана лечения (взрослые)</p>
+                  <p class="price-row__right">550</p>
+                </div>
+                <div class="price-row">
+                  <p class="price-row__left">Первичная консультация врача-стоматолога (дети)</p>
+                  <p class="price-row__right">35 000</p>
+                </div>
+                <div class="price-row">
+                  <p class="price-row__left">Снятие твердых зубных отложений (ультразвук) - 1 зуб</p>
+                  <p class="price-row__right">23 000</p>
+                </div>
+                <div class="price-row">
+                  <p class="price-row__left">Лечение кариеса (в зависимости от объема пораженных тканей зуба и глубины поражения)</p>
+                  <p class="price-row__right">22 000</p>
+                </div>                
+              </div>
+
+              <div class="price-block" id="block4">
+                <p class="price-title">Терапия</p>
+                <div class="price-row">
+                  <p class="price-row__left">Первичная консультация врача-терапевта и составление плана лечения (взрослые)</p>
+                  <p class="price-row__right">550</p>
+                </div>
+                <div class="price-row">
+                  <p class="price-row__left">Первичная консультация врача-стоматолога (дети)</p>
+                  <p class="price-row__right">35 000</p>
+                </div>
+                <div class="price-row">
+                  <p class="price-row__left">Снятие твердых зубных отложений (ультразвук) - 1 зуб</p>
+                  <p class="price-row__right">23 000</p>
+                </div>
+                <div class="price-row">
+                  <p class="price-row__left">Лечение кариеса (в зависимости от объема пораженных тканей зуба и глубины поражения)</p>
+                  <p class="price-row__right">22 000</p>
+                </div>                
+              </div>
+
+              <div class="price-block" id="block5">
+                <p class="price-title">Терапия</p>
+                <div class="price-row">
+                  <p class="price-row__left">Первичная консультация врача-терапевта и составление плана лечения (взрослые)</p>
+                  <p class="price-row__right">550</p>
+                </div>
+                <div class="price-row">
+                  <p class="price-row__left">Первичная консультация врача-стоматолога (дети)</p>
+                  <p class="price-row__right">35 000</p>
+                </div>
+                <div class="price-row">
+                  <p class="price-row__left">Снятие твердых зубных отложений (ультразвук) - 1 зуб</p>
+                  <p class="price-row__right">23 000</p>
+                </div>
+                <div class="price-row">
+                  <p class="price-row__left">Лечение кариеса (в зависимости от объема пораженных тканей зуба и глубины поражения)</p>
+                  <p class="price-row__right">22 000</p>
+                </div>                
+              </div>
+
+              <div class="price-block" id="block6">
+                <p class="price-title">Терапия</p>
+                <div class="price-row">
+                  <p class="price-row__left">Первичная консультация врача-терапевта и составление плана лечения (взрослые)</p>
+                  <p class="price-row__right">550</p>
+                </div>
+                <div class="price-row">
+                  <p class="price-row__left">Первичная консультация врача-стоматолога (дети)</p>
+                  <p class="price-row__right">35 000</p>
+                </div>
+                <div class="price-row">
+                  <p class="price-row__left">Снятие твердых зубных отложений (ультразвук) - 1 зуб</p>
+                  <p class="price-row__right">23 000</p>
+                </div>
+                <div class="price-row">
+                  <p class="price-row__left">Лечение кариеса (в зависимости от объема пораженных тканей зуба и глубины поражения)</p>
+                  <p class="price-row__right">22 000</p>
+                </div>                
+              </div>
+
+
             </div>
           </div> 
 
@@ -139,7 +221,7 @@
               <button class="default-btn" type="submit">Отправить</button>
             </form>
             <div class="form-map">
-              <img src="./build/img/map-footer.jpg" alt="">
+              <img src="/img/map-footer.jpg" alt="">
             </div>
           </div>
       </div>
@@ -175,6 +257,14 @@
         </div>
         <div class="footer-column">
           <p class="footer-title">Лицензии</p>
+          <div class="footer-list">
+            <a href="/img/footer-sert.jpg" data-fancybox="footer-sert"><img src="/img/footer-sert.jpg" alt=""></a>
+            <a href="/img/footer-sert.jpg" data-fancybox="footer-sert"><img src="/img/footer-sert.jpg" alt=""></a>
+            <a href="/img/footer-sert.jpg" data-fancybox="footer-sert"><img src="/img/footer-sert.jpg" alt=""></a>
+            <a href="/img/footer-sert.jpg" data-fancybox="footer-sert"><img src="/img/footer-sert.jpg" alt=""></a>
+            <a href="/img/footer-sert.jpg" data-fancybox="footer-sert"><img src="/img/footer-sert.jpg" alt=""></a>
+            <a href="/img/footer-sert.jpg" data-fancybox="footer-sert"><img src="/img/footer-sert.jpg" alt=""></a>
+          </div>
         </div>
         <div class="footer-column footer-column_contacts">
           <p class="footer-title">Контакты</p>
@@ -211,7 +301,8 @@
     </div>
   </footer>
 
-  
-  <script href="./build/js/main.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>  
+  <script src="/libs/libs.js"></script>
+  <script src="/js/main.js"></script>
 </body>
 </html>

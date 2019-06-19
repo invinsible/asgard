@@ -14,8 +14,19 @@ body {
 main {
   padding-bottom: 80px;
   background-color: #fbfbfb;
-  background-image: url('/build/img/main-bg.png');
+  background-image: url('/img/main-bg.png');
 }
+
+ol {
+  padding-left: 20px;
+  color: #2FBEAD;
+  line-height: 23px;
+
+  span {
+    color: #333333;
+  }
+ }       
+        
 
 .inner-main {
   padding-top: 40px; 
@@ -106,7 +117,7 @@ h3 {
       position: absolute;
       width: 83px;
       height: 57px;
-      background: url('/build/img/blockquote.png');
+      background: url('/img/blockquote.png');
       top: -15px;     
       left: -15px;
       opacity: 0.5;
@@ -117,7 +128,7 @@ h3 {
       position: absolute;
       width: 83px;
       height: 57px;
-      background: url('/build/img/blockquote.png');
+      background: url('/img/blockquote.png');
       bottom: -15px;     
       right: -15px;
       opacity: 0.5;
@@ -164,7 +175,7 @@ h3 {
   height: 24px;
   margin-right: 18px;
   text-decoration: none;
-  background-image: url('/build/img/social-sprite.png');
+  background-image: url('/img/social-sprite.png');
   transition: all 0.3s;
 
  &:hover {
@@ -348,6 +359,8 @@ h3 {
   .sertificate-list__item {
     position: relative;
     display: block;
+    max-width: 190px;
+    max-height: 140px;
     margin-right: 11px;
     text-decoration: none;
 
@@ -359,7 +372,7 @@ h3 {
       width: 100%;
       height: 98%;
       background-color: rgba(0,0,0,0.3);
-      background-image: url('/build/img/plus.svg');
+      background-image: url('/img/plus.svg');
       background-repeat: no-repeat;
       background-position: center;
     }
@@ -379,18 +392,20 @@ h3 {
   display: flex;
   flex-wrap: wrap;
 
+  .slick-active:first-child {
+    border-radius: 20px 0px 0px 20px; 
+    overflow: hidden;
+  }
+
+  .slick-active:last-child {
+    border-radius: 0px 20px 20px 0px;
+    overflow: hidden;
+  }
+
   .work-list__item {
     display: block;
     margin-right: 10px;
-    overflow: hidden;  
-
-    &:first-child {
-      border-radius: 20px 0px 0px 20px; 
-    }
-
-    &:last-child {
-      border-radius: 0px 20px 20px 0px;
-    }
+    overflow: hidden;      
     
     a {
       display: block;
