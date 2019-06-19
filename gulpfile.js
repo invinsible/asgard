@@ -1,6 +1,6 @@
 // Подключаем плагины
 const gulp = require('gulp');
-//const concat = require('gulp-concat');
+const concat = require('gulp-concat');
 const sourcemaps = require('gulp-sourcemaps');
 const postCss =  require('gulp-postcss');
 const autoprefixer = require('autoprefixer');
@@ -23,17 +23,26 @@ gulp.task('clean', function(){
 const pathFrom = {
     cssFile  : './src/scss/style.scss',
     allCss   : './src/scss/**/*.{scss,sass}',
-    jsFile   : './src/js/**/*.js',
+    jsFiles   : './src/js/**/*.js',
     imgFiles : './src/img/*.{png,jpg,svg}',
-    htmlFiles: './*.html'
+    htmlFiles: './src/*.html',
+    jsLibs   : './src/libs/*.js'
 }
 // Пути куда возвращать файлы
 const pathTo = {
     cssFiles : './build/css',
     jsFiles  : './build/js',
     imgFiles : './build/img',
-    fontFiles: './build/fonts'
+    fontFiles: './build/fonts',
+    jsLibs   : './build/libs',
+    root     : './build'
 }
+
+gulp.task('html', function() {
+    return gulp.src(pathFrom.htmlFiles)
+    .pipe(gulp.dest(pathTo.root))
+    .pipe(server.stream());
+});
 
 // Обработка CSS
 gulp.task('css', function() {
@@ -50,11 +59,19 @@ gulp.task('css', function() {
     .pipe(server.stream());
 });
 
-gulp.task('js', function() {
-    return gulp.src(pathFrom.jsFile)
+gulp.task('jsTask', function() {
+    return gulp.src(pathFrom.jsFiles)
+    .pipe(plumber())
     //.pipe(uglify())
     .pipe(gulp.dest(pathTo.jsFiles))
-    .pipe(server.stream());
+    //.pipe(server.stream());
+});
+
+gulp.task('jsLibs', function() {
+    return gulp.src(pathFrom.jsLibs)
+    .pipe(concat('libs.js'))  
+    //.pipe(uglify())  
+    .pipe(gulp.dest(pathTo.jsLibs))
 });
 
 gulp.task('images', function(){
@@ -76,10 +93,11 @@ gulp.task('fonts', function () {
 
 gulp.task('server', function(){
     server.init({
-        server: '.'
+        server: 'build/'
     });
+    gulp.watch(pathFrom.htmlFiles, gulp.series('html'));
     gulp.watch(pathFrom.allCss, gulp.series('css'));
-    gulp.watch(pathFrom.jsFile, gulp.series('js'));
+    //gulp.watch(pathFrom.jsFile, gulp.series('js'));
     gulp.watch(pathFrom.imgFiles, gulp.series('images'));
     gulp.watch(pathFrom.htmlFiles, gulp.series('refresh'));
 });
@@ -95,7 +113,7 @@ gulp.task('refresh', function(done){
 
 
 
-gulp.task('build', gulp.series('clean', 'fonts', 'css', 'js', 'images'));
+gulp.task('build', gulp.series('clean', 'html', 'jsLibs', 'fonts', 'css', 'jsTask'));
 
 gulp.task('start', gulp.series('build', 'server'));
 
