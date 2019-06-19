@@ -6,8 +6,9 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,500,700&display=swap&subset=cyrillic,cyrillic-ext" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500&display=swap&subset=cyrillic,cyrillic-ext" rel="stylesheet">
-  <link rel="stylesheet" href="./build/css/style.css">
-  <title>Asgard Стоматология</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
+  <link rel="stylesheet" href="./build/css/style.css">  
+  <title>Asgard Стоматология</title>  
 </head>
 <body>
   <header class="site-header">
@@ -151,8 +152,8 @@
             </span>
           </p>
 
-          <a class="default-btn" href="#">Записаться на прием</a>
-          <a class="white-btn" href="#">Заказать обратный звонок</a>
+          <a class="default-btn" data-fancybox data-src="#modal-invite" href="javascript:;">Записаться на прием</a>          
+          <a class="white-btn" data-fancybox data-src="#modal-callback" href="javascript:;">Заказать обратный звонок</a>
         </div>
       </div>
 
@@ -174,7 +175,28 @@
     </div>
   </footer>
 
-  
+
+  <div class="modal" id="modal-invite">
+    <p class="modal__title">Записаться на прием</p>
+    <form class="modal__form" action="#">
+      <input class="modal__form-input" type="text" placeholder="Имя">
+      <input class="modal__form-input" type="text" placeholder="Телефон">
+      <input class="modal__form-input" type="text" placeholder="E-mail">
+      <label class="modal__form-politic" for="politic-check">
+        <input type="checkbox" id="politic-check" checked>
+        <p>Я даю своё согласие на обработку персональных данных, с <a href="#">условиями обработки</a> персональных данных ознакомлен</p>
+      </label>      
+      <button class="default-btn" type="submit">Отправить</button>
+      </form>
+  </div>
+
+  <div class="modal" id="modal-callback">
+    <h2>Заказать обратный звонок</h2>
+    <p>You are awesome.</p>
+  </div>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>  
+  <script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
   <script href="./build/js/main.js"></script>
 </body>
 </html>
