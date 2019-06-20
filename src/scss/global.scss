@@ -363,6 +363,7 @@ h3 {
     max-height: 140px;
     margin-right: 11px;
     text-decoration: none;
+    outline: none;
 
     &::after {
       content: '';
@@ -409,6 +410,7 @@ h3 {
     
     a {
       display: block;
+      outline: none;
     }
 
     img {

@@ -1,3 +1,4 @@
+
 $('.sertificate-list').slick({
   infinite: false,
   slidesToShow: 6,
@@ -15,7 +16,6 @@ $('.footer-list').slick({
   slidesToShow: 1,
   slidesToScroll: 1
 });
-
 
 
 var $page = $('html, body');

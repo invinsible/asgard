@@ -13,6 +13,7 @@ const uglify = require('gulp-uglify');
 const sass = require('gulp-sass');
 const plumber = require('gulp-plumber');
 const del = require('del');
+var rigger = require('gulp-rigger'); // Для шаблонизации
 
 // Удаление папки build
 gulp.task('clean', function(){
@@ -25,7 +26,7 @@ const pathFrom = {
     allCss   : './src/scss/**/*.{scss,sass}',
     jsFiles   : './src/js/**/*.js',
     imgFiles : './src/img/*.{png,jpg,svg}',
-    htmlFiles: './src/*.html',
+    htmlFiles: './src/**/*.html',
     jsLibs   : './src/libs/*.js'
 }
 // Пути куда возвращать файлы
@@ -40,6 +41,7 @@ const pathTo = {
 
 gulp.task('html', function() {
     return gulp.src(pathFrom.htmlFiles)
+    .pipe(rigger())  //Добавляем в разметку из шаблонов
     .pipe(gulp.dest(pathTo.root))
     .pipe(server.stream());
 });
