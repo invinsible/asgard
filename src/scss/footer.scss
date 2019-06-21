@@ -29,6 +29,16 @@
     margin-top: 20px;    
     background: url('/img/footer-title-line.png');
     background-color: #2FBEAD;
+
+    @media (max-width: 1023px) {
+      margin-top: 8px; 
+      height: 1px;
+    }
+  }
+
+  @media (max-width: 1023px) {
+    margin: 0 0 20px 0;
+    font-size: 16px;
   }
   
 }
@@ -47,21 +57,34 @@
       border-color: transparent;
     }
 
-  a {
-    font-size: 15px;
-    font-weight: 500;
-    color: rgba(255,255,255,0.5);
-    text-decoration: none;
-    
-    &:hover {
-      color: #fff;
+    a {
+      font-size: 15px;
+      font-weight: 500;
+      color: rgba(255,255,255,0.5);
+      text-decoration: none;
+      
+      &:hover {
+        color: #fff;
+      }
+
+      @media (max-width: 1023px) {
+        font-size: 12px;
+        line-height: 14px;
+      }
     }
-  }
+
+    @media (max-width: 1023px) {
+      margin-bottom: 7px;
+    }
   }
 
   &__item {
     display: block;
     margin-bottom: 8px;    
+  }
+
+  @media (max-width: 1023px) {
+    width: 80%;
   }
 }
 

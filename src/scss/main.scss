@@ -1,12 +1,17 @@
 .slider-list {
-  position: relative;
-  height: 602px;
+  position: relative; 
 
   &__item {
+    padding: 7% 0;
     height: 100%;
     background-image: url("/img/slide1.png");
     background-size: cover;
     background-repeat: no-repeat;
+
+    @media (max-width: 1023px) {
+      padding: 4% 0;
+      background-size: cover;
+    }
   }
 }
 
@@ -32,12 +37,25 @@
       color: #fff;
       font-size: 30px;
       line-height: 43px;
+
+      @media (max-width: 1023px) {
+        font-size: 16px;
+        line-height: 22px;
+      }
     }
 
     .white-btn {
       padding: 14px 38px;
       border-width: 4px;
+
+      @media (max-width: 1023px) {
+        padding: 12px 18px;
+      }
     }
+  }
+
+  @media (max-width: 1023px) {
+    font-size: 16px;
   }
 }
 
@@ -59,6 +77,12 @@
     font-size: 20px;
     color: #333333;
     line-height: 30px;
+
+    @media (max-width: 1023px) {
+      font-size: 12px;
+      font-weight: 500;
+      line-height: 16px;
+    }
   }
 
   &__item {
@@ -98,11 +122,11 @@
   &__img {
     flex-basis: 44%;
     max-width: 640px;
-    height: 490px;
     overflow: hidden;
     margin-right: 25px;
     background: url('/img/main-img-doctors.jpg');
     background-position: center;
+    background-repeat: no-repeat;
   }
 
   &__txt {
@@ -119,16 +143,29 @@
         span {
           position: initial;
         }
+
+        @media (max-width: 1023px) {
+          font-size: 15px;
+          line-height: 23px;
+        }
       }    
 
       .blocquote-name {
         margin: 28px 0 10px 0;
         font-size: 22px;
+
+        @media (max-width: 1023px) {
+          font-size: 14px;          
+        }
       }
 
       .blocquote-status {
         margin: 0;
         font-size: 16px;
+
+        @media (max-width: 1023px) {
+          font-size: 10px;          
+        }
       }
     }
   }
