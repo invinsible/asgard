@@ -1,5 +1,4 @@
 .aside-menu {
-
     ul {
         list-style: none;
     }
@@ -15,15 +14,15 @@
         }
     }
 
-    .aside-menu__list {
-        padding-left: 0;
-
-        .aside-menu__item {
-            font-size: 20px;
-        }
+    &__list {
+        padding-left: 0;       
     }   
 
-    .aside-menu__sub {
+    &__item {
+        font-size: 20px;
+    }
+
+    &__sub {
         a {
             font-size: 18px;
         }

@@ -1,42 +1,42 @@
 .slider-list {
   position: relative;
   height: 602px;
-}
 
-.slider {
-  margin-bottom: 36px;
-
-  .slider-list__item {
+  &__item {
     height: 100%;
     background-image: url("/img/slide1.png");
     background-size: cover;
     background-repeat: no-repeat;
-  
-    .slider-body {
-      max-width: 1280px;
-      height: 100%;
-      padding: 0 20px;
-      margin: 0 auto;
-      display: flex;
-      align-items: center;
-      justify-content: flex-end;      
-      text-align: right;
-      font-size: 20px;
-    
-      .slider-body__txt {
-        width: 50%;
+  }
+}
 
-        p {
-          color: #fff;
-          font-size: 30px;
-          line-height: 43px;
-        }
-    
-        .white-btn {
-          padding: 14px 38px;
-          border-width: 4px;
-        }
-      }
+.slider {
+  margin-bottom: 36px;  
+}
+
+.slider-body {
+  max-width: 1280px;
+  height: 100%;
+  padding: 0 20px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;      
+  text-align: right;
+  font-size: 20px;
+
+  &__txt {
+    width: 50%;
+
+    p {
+      color: #fff;
+      font-size: 30px;
+      line-height: 43px;
+    }
+
+    .white-btn {
+      padding: 14px 38px;
+      border-width: 4px;
     }
   }
 }
@@ -54,7 +54,14 @@
   justify-content: space-around;
   align-items: center;
 
-  .main-service__item {
+  &__title {
+    margin: 0;
+    font-size: 20px;
+    color: #333333;
+    line-height: 30px;
+  }
+
+  &__item {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -64,14 +71,7 @@
 
     &:hover img{
       transform: scale(1.2);
-    }
-
-    .main-service__title {
-      margin: 0;
-      font-size: 20px;
-      color: #333333;
-      line-height: 30px;
-    }
+    }   
 
     img {
       max-width: 75px;
@@ -95,7 +95,7 @@
   }
    
 
-  .main-content__img {
+  &__img {
     flex-basis: 44%;
     max-width: 640px;
     height: 490px;
@@ -105,7 +105,7 @@
     background-position: center;
   }
 
-  .main-content__txt {
+  &__txt {
     flex-basis: 56%;
 
     .blocquote-style {
@@ -133,3 +133,4 @@
     }
   }
 }
+ 

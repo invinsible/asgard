@@ -16,37 +16,37 @@
         margin-right: 4%;
     }  
 
-    .doctor-preview__info {
+    &__info {
         display: flex;
         align-items: center;
     
         p {
             margin: 8px 0;
             line-height: 22px;
-        }
+        }        
+    }
 
-        .doctor-preview__img {
-            margin-right: 24px;
-            flex-basis: 36%;
-    
-            img {
-                max-width: 100%;;
-            }
-        }
+    &__img {
+        margin-right: 24px;
+        flex-basis: 36%;
 
-        .doctor-preview__descr {
-            flex-basis: 64%;
+        img {
+            max-width: 100%;;
         }
-    
-        .doctor-preview__name {
-            display: block;
-            margin: 8px 0;
-            font-family: 'FavoritC';
-            font-size: 20px;            
-            background: linear-gradient(84deg, #2FBEAD -30%, #2D9CDB 155%);
-            background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
+    }
+
+    &__descr {
+        flex-basis: 64%;
+    }
+
+    &__name {
+        display: block;
+        margin: 8px 0;
+        font-family: 'FavoritC';
+        font-size: 20px;            
+        background: linear-gradient(84deg, #2FBEAD -30%, #2D9CDB 155%);
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
     }
 }
 

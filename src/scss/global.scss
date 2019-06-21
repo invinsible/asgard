@@ -25,7 +25,7 @@ ol {
   span {
     color: #333333;
   }
- }       
+}       
         
 
 .inner-main {
@@ -74,20 +74,20 @@ h3 {
 .two-column-page {
   margin-bottom: 16px;
   display: flex;
-  align-items: flex-start;
+  align-items: flex-start; 
+}
 
-  .left-column {
-    flex-basis: 27.5%;
-    margin-right: 3%;
-    font-size: 15px;
-  }
+.left-column {
+  flex-basis: 27.5%;
+  margin-right: 3%;
+  font-size: 15px;
+}
 
-  .right-column {
-    flex-basis: 72%;
+.right-column {
+  flex-basis: 72%;
 
-    h1 {
-      margin-bottom: 24px;
-    }
+  h1 {
+    margin-bottom: 24px;
   }
 }
 
@@ -103,42 +103,10 @@ h3 {
 // Стилизованные цитаты
 .blocquote-style {
  font-weight: 300;
- font-style: italic;
+ font-style: italic; 
+}
 
- .blocquote-txt {
-   position: relative;
-
-   span {
-     position: relative;
-     z-index: 2;
-   
-    &::before {
-      content: '';
-      position: absolute;
-      width: 83px;
-      height: 57px;
-      background: url('/img/blockquote.png');
-      top: -15px;     
-      left: -15px;
-      opacity: 0.5;
-      z-index: 1;
-    }
-    &::after {
-      content: '';
-      position: absolute;
-      width: 83px;
-      height: 57px;
-      background: url('/img/blockquote.png');
-      bottom: -15px;     
-      right: -15px;
-      opacity: 0.5;
-      z-index: 1;
-      transform: rotate(180deg);
-    }
-  }
- }
-
- .blocquote-name,
+.blocquote-name,
  .blocquote-status {
    font-family: 'Montserrat', sans-serif;
    font-weight: 500;
@@ -148,6 +116,38 @@ h3 {
  .blocquote-status {  
   color: #828282;
  } 
+
+.blocquote-txt {
+  position: relative;
+
+  span {
+    position: relative;
+    z-index: 2;
+  
+   &::before {
+     content: '';
+     position: absolute;
+     width: 83px;
+     height: 57px;
+     background: url('/img/blockquote.png');
+     top: -15px;     
+     left: -15px;
+     opacity: 0.5;
+     z-index: 1;
+   }
+   &::after {
+     content: '';
+     position: absolute;
+     width: 83px;
+     height: 57px;
+     background: url('/img/blockquote.png');
+     bottom: -15px;     
+     right: -15px;
+     opacity: 0.5;
+     z-index: 1;
+     transform: rotate(180deg);
+   }
+ }
 }
 
 // Оформление белых блоков со скругленными углами
@@ -167,38 +167,45 @@ h3 {
 // Социальные сети
 .social-links {
   display: flex;
+
+  &__item {
+    display: block;
+    width: 24px;
+    height: 24px;
+    margin-right: 18px;
+    text-decoration: none;
+    background-image: url('/img/social-sprite.png');
+    transition: all 0.3s;
+  
+  &:hover {
+     background-position-y: 0;
+  }
+
+  &_vk {  
+    background-position: -3px 23px;
+  }
+  
+  &_fb {
+    background-position: -28px 26px;
+  }
+  
+  &_tw {
+    background-position: -53px 24px;
+  }
+  
+  &_g {
+    margin-right: 0;
+    background-position: -76px 25px;
+  }
+
+  @media (max-width: 1023px) {
+    margin-right: 5px;
+  }
+
+  }
 }
 
-.social-links__item {
-  display: block;
-  width: 24px;
-  height: 24px;
-  margin-right: 18px;
-  text-decoration: none;
-  background-image: url('/img/social-sprite.png');
-  transition: all 0.3s;
 
- &:hover {
-   background-position-y: 0;
- }
-}
-
-.social-links__item_vk {  
-  background-position: -3px 23px;
-}
-
-.social-links__item_fb {
-  background-position: -28px 26px;
-}
-
-.social-links__item_tw {
-  background-position: -53px 24px;
-}
-
-.social-links__item_g {
-  margin-right: 0;
-  background-position: -76px 25px;
-}
 
 // Кнопка обратного звонка с градиентом
 .default-btn {
@@ -250,7 +257,7 @@ h3 {
 .breadcrumbs {
   margin-bottom: 28px;
 
-  .breadcrumbs-list {
+  &-list {
       padding-left: 0;
       margin: 0;
       list-style: none;
@@ -276,76 +283,76 @@ h3 {
 // Форма перед футером
 .pre-footer {
   display: flex;
+}
 
-  .footer-form {
-    flex-basis: 48%;
-    margin-right: 2%;
+.footer-form {
+  flex-basis: 48%;
+  margin-right: 2%;
 
-    .footer-form__title {
-      font-family: 'FavoritC';
-      margin: 0 0 16px 0;
-      font-size: 20px;
-      text-align: center;
-      background: linear-gradient(84deg, #2FBEAD -30%, #2D9CDB 155%);
-      background-clip: text;
-      -webkit-text-fill-color: transparent;
-    }
+  &__title {
+    font-family: 'FavoritC';
+    margin: 0 0 16px 0;
+    font-size: 20px;
+    text-align: center;
+    background: linear-gradient(84deg, #2FBEAD -30%, #2D9CDB 155%);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
 
-    .footer-form__input,
-    textarea {
-      padding: 14px 16px;
-      font-size: 15px;
-      border: 1px solid #E0E0E0;
-      border-radius: 9px;      
-      outline: none;
-      box-sizing: border-box;
-      
-      &:focus {
-        border: 1px solid #BDBDBD;
-      }
-      &::placeholder {
-        color: #BDBDBD;
-      }
-    }
-
-    textarea {
-      width: 100%;
-    }
+  &__input,
+  textarea {
+    padding: 14px 16px;
+    font-size: 15px;
+    border: 1px solid #E0E0E0;
+    border-radius: 9px;      
+    outline: none;
+    box-sizing: border-box;
     
-    .form-flex {
-      display: flex;
-      margin-bottom: 10px;
-
-      .input-width {
-        width: 49%;
-        margin-right: 2%;
-  
-        &:last-child {
-          margin-right: 0;
-        }
-      }      
-    } 
-
-    .politic-txt {
-      font-size: 13px;
-      margin-bottom: 15px;
-
-      a {
-        color: #2FBEAD;
-        text-decoration: none;
-      }
+    &:focus {
+      border: 1px solid #BDBDBD;
+    }
+    &::placeholder {
+      color: #BDBDBD;
     }
   }
 
-  .form-map {
-    flex-basis: 50%;
-    
-    img {
-      width: 100%;
-      border-radius: 40px;
-    }
+  textarea {
+    width: 100%;
   }  
 }
+
+.form-flex {
+  display: flex;
+  margin-bottom: 10px;         
+} 
+
+.input-width {
+  width: 49%;
+  margin-right: 2%;
+
+  &:last-child {
+    margin-right: 0;
+  }
+} 
+
+.politic-txt {
+  font-size: 13px;
+  margin-bottom: 15px;
+
+  a {
+    color: #2FBEAD;
+    text-decoration: none;
+  }
+}
+
+.form-map {
+  flex-basis: 50%;
+  
+  img {
+    width: 100%;
+    border-radius: 40px;
+  }
+}  
 
 
 // Сертификаты
@@ -356,7 +363,7 @@ h3 {
   display: flex;
   flex-wrap: wrap;
   
-  .sertificate-list__item {
+  &__item {
     position: relative;
     display: block;
     max-width: 190px;
@@ -403,7 +410,7 @@ h3 {
     overflow: hidden;
   }
 
-  .work-list__item {
+  &__item {
     display: block;
     margin-right: 10px;
     overflow: hidden;      

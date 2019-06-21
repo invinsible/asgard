@@ -46,21 +46,18 @@
     }
 }
 
-.doctor-study {
+.doctor-prof {
+    margin: 0 0 8px 0;
+    font-size: 22px;
+    font-weight: 500;
+    color: #828282;
+}
 
-    .doctor-prof {
-        margin: 0 0 8px 0;
-        font-size: 22px;
-        font-weight: 500;
-        color: #828282;
-    }
-
-    .doctor-since {
-        margin: 0 0 24px 0;
-        font-size: 18px;
-        font-weight: 500;
-        color: #BDBDBD;
-    }
+.doctor-since {
+    margin: 0 0 24px 0;
+    font-size: 18px;
+    font-weight: 500;
+    color: #BDBDBD;
 }
 
 .doctor-specialisation {
@@ -69,21 +66,19 @@
     }    
 }
 
-.doctor-about {
-  .blocquote-style { 
+.doctor-about {  
     .blocquote-txt {   
-      span { 
-        &::after {
-        bottom: -30px;
-        right: -40px;
-        transform: rotate(180deg) scale(0.5);
+        span { 
+            &::after {
+            bottom: -30px;
+            right: -40px;
+            transform: rotate(180deg) scale(0.5);
+            }
+            &::before {
+            top: -30px;
+            left: -35px;
+            transform: scale(0.5);
+            }
         }
-        &::before {
-        top: -30px;
-        left: -35px;
-        transform: scale(0.5);
-        }
-      }
-    }
-  }
+    }  
 }

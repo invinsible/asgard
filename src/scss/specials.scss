@@ -17,7 +17,7 @@
       }
     }
     
-    .special__item-img {
+    &-img {
         flex-basis: 50%;
         margin-right: 24px;
         border-radius: 20px;
@@ -28,7 +28,7 @@
       }
     }
 
-    .special__item-txt {
+    &-txt {
       flex-basis: 50%;
     }
 }

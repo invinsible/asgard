@@ -27,44 +27,16 @@
         display: block;
         margin: auto;
         font-size: 21px;
-    }
+    }    
 
-    .modal__form-politic {
-        display: flex;
-        align-items: flex-start;
-
-        input {
-            margin-right: 8px;
-            border: 1px solid #E0E0E0;
-            border-radius: 9px;
-        }
-
-        p {
-            margin: 0;
-            margin-bottom: 32px;
-            font-size: 12px;
-            line-height: 14px;
-            max-width: 300px;
-
-            a {
-                color: #333333;
-
-                &:hover {
-                    text-decoration: none;
-                }
-            }
-        }
-        
-    }
-
-    .modal__title {
+    &__title {
         margin: 0 0 24px 0;
         font-size: 21px;
         font-weight: 500;
         text-align: center;
     }
 
-    .modal__form-input {
+    &__form-input {
         display: block;
         padding: 14px 16px;
         margin-bottom: 16px;
@@ -86,4 +58,31 @@
             color: #BDBDBD;
         }
     }
+}
+
+.modal__form-politic {
+    display: flex;
+    align-items: flex-start;
+
+    input {
+        margin-right: 8px;
+        border: 1px solid #E0E0E0;
+        border-radius: 9px;
+    }
+
+    p {
+        margin: 0;
+        margin-bottom: 32px;
+        font-size: 12px;
+        line-height: 14px;
+        max-width: 300px;
+
+        a {
+            color: #333333;
+
+            &:hover {
+                text-decoration: none;
+            }
+        }
+    }    
 }
