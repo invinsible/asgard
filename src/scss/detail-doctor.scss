@@ -51,6 +51,10 @@
     font-size: 22px;
     font-weight: 500;
     color: #828282;
+
+    @media (max-width: 1023px) { 
+      font-size: 18px;     
+    }
 }
 
 .doctor-since {
@@ -58,6 +62,10 @@
     font-size: 18px;
     font-weight: 500;
     color: #BDBDBD;
+
+    @media (max-width: 1023px) { 
+      font-size: 16px;     
+    }
 }
 
 .doctor-specialisation {

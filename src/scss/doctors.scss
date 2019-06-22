@@ -1,12 +1,12 @@
 .doctors-list {
     display: flex;
-    flex-wrap: wrap;
+    flex-wrap: wrap;    
 }
 
 .doctor-preview {
     flex-basis: 45%;
-    margin-right: 16px;
-    margin-bottom: 16px;
+    margin-right: 1%;
+    margin-bottom: 1%;
 
     &:nth-child(2n) {
         margin-right: 0;
@@ -23,7 +23,17 @@
         p {
             margin: 8px 0;
             line-height: 22px;
-        }        
+
+            @media (max-width: 1023px) {    
+              font-size: 13px;
+              line-height: 18px;
+            }
+        } 
+        
+        @media (max-width: 890px) { 
+          flex-direction: column;
+          margin-bottom: 15px;     
+        }
     }
 
     &__img {
@@ -47,7 +57,20 @@
         background: linear-gradient(84deg, #2FBEAD -30%, #2D9CDB 155%);
         background-clip: text;
         -webkit-text-fill-color: transparent;
+
+        @media (max-width: 1023px) {    
+          font-size: 16px;
+        }
     }
+
+    @media (max-width: 1197px) {    
+      flex-basis: 44%;      
+    }
+
+    @media (max-width: 1023px) { 
+      flex-basis: 43%;   
+      font-size: 13px;      
+    }    
 }
 
 

@@ -1,8 +1,24 @@
-
 $('.sertificate-list').slick({
   infinite: false,
   slidesToShow: 6,
-  slidesToScroll: 2
+  slidesToScroll: 2,
+  responsive: [
+    {
+      breakpoint: 1023,
+      settings: {
+        slidesToShow: 4,
+        slidesToScroll: 2,
+        infinite: true
+      }
+    },
+    {
+      breakpoint: 800,
+      settings: {
+        slidesToShow: 3,
+        slidesToScroll: 2
+      }
+    }    
+  ]
 });
 
 $('.work-list').slick({

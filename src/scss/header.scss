@@ -115,6 +115,11 @@
         font-size: 20px;
         color: #333333;
         text-decoration: none;
+
+        @media (max-width: 1023px) {
+          padding: 5px 24px;
+          font-size: 16px;
+        }
       }
     }
   }

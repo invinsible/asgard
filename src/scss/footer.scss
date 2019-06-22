@@ -89,7 +89,7 @@
 }
 
 .footer-column_contacts {
-  p {
+  &__text {
     margin: 0 0 10px 0;
 
     &::after {
@@ -109,6 +109,10 @@
       &:hover {
         color: #fff;
       }
+
+      @media (max-width: 1023px) {
+        font-size: 12px;
+      }
     }
   }
 
@@ -116,6 +120,15 @@
   .default-btn {
     margin-top: 16px;
     font-size: 15px;
+
+    @media (max-width: 1023px) {
+      font-size: 10px;
+    }
+  }
+
+  @media (max-width: 1023px) {
+    font-size: 12px;
+    line-height: 14px;
   }
 }
 
@@ -162,6 +175,11 @@
       display: inline-block;
       padding: 3px;
       transform: rotate(135deg);
+
+      @media (max-width: 1023px) {
+        width: 7px;
+        height: 7px;
+      }
     }
   }
 
@@ -177,10 +195,23 @@
       display: inline-block;
       padding: 3px;
       transform: rotate(-45deg);
+
+      @media (max-width: 1023px) {
+        width: 7px;
+        height: 7px;
+      }
     }
   }
 
   a {
     outline: none;
+  }
+
+  .slick-slide img {
+    width: 100%;
+  }
+
+  @media (max-width: 1023px) {
+    width: 125px;
   }
 }
